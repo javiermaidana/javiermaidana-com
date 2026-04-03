@@ -20,32 +20,51 @@
     .page-header-lead { font-family: var(--font-body); font-size: 1.1rem; color: var(--text-mid); line-height: 1.7; }
     .page-header-photo { width: 100%; aspect-ratio: 3/4; object-fit: cover; object-position: top center; border-radius: var(--radius-lg); display: block; }
     .page-header-photo-placeholder { width: 100%; aspect-ratio: 3/4; border-radius: var(--radius-lg); background: var(--blue-bg); display: flex; align-items: center; justify-content: center; color: var(--blue); font-size: 0.85rem; font-family: var(--font-body); text-align: center; padding: 20px; }
+
     .content-area { background: var(--white); padding: 64px 60px; }
     .content-inner { max-width: 760px; margin: 0 auto; }
+
     .section-label { font-family: var(--font-body); font-size: 0.75rem; font-weight: 600; letter-spacing: 0.14em; text-transform: uppercase; color: var(--blue); margin-bottom: 10px; }
     .section-title { font-family: var(--font-head); font-size: clamp(1.4rem,2.5vw,1.9rem); font-weight: 800; color: var(--text-dark); line-height: 1.2; letter-spacing: -0.01em; margin-bottom: 20px; }
+
     .bio-block { margin-bottom: 48px; }
     .bio-block p { font-family: var(--font-body); font-size: 1rem; color: var(--text-mid); line-height: 1.75; margin-bottom: 16px; }
+
     .highlight-card { background: var(--blue-bg); border-left: 4px solid var(--blue); border-radius: 0 var(--radius) var(--radius) 0; padding: 20px 24px; margin: 32px 0; }
     .highlight-card p { font-family: var(--font-body); font-size: 1.05rem; font-weight: 500; color: var(--text-dark); line-height: 1.6; margin: 0; }
+
     .pillars { display: grid; grid-template-columns: repeat(2,1fr); gap: 16px; margin: 32px 0; }
     .pillar { background: var(--bg); border: 1px solid var(--border); border-radius: var(--radius); padding: 20px; }
     .pillar-icon { font-size: 1.5rem; margin-bottom: 8px; display: block; }
     .pillar-title { font-family: var(--font-head); font-size: 0.95rem; font-weight: 800; color: var(--text-dark); margin-bottom: 6px; }
     .pillar-desc { font-family: var(--font-body); font-size: 0.875rem; color: var(--text-light); line-height: 1.5; }
+
     .content-divider { border: none; border-top: 1px solid var(--border); margin: 48px 0; }
+
     .content-cta { text-align: center; padding: 48px 0 16px; }
     .content-cta h3 { font-family: var(--font-head); font-size: 1.5rem; font-weight: 800; color: var(--text-dark); margin-bottom: 12px; }
-   <img src="assets/TBX Logo Flat.png" width="44" height="36" alt="TBX Logo" style="border-radius:6px;object-fit:contain;" aria-hidden="true" />
+    .content-cta p { font-family: var(--font-body); font-size: 1rem; color: var(--text-mid); margin-bottom: 20px; }
     .content-cta-buttons { display: flex; gap: 14px; justify-content: center; flex-wrap: wrap; }
-    @media (max-width:900px) { .page-header { padding: 48px 32px 40px; } .page-header-inner { grid-template-columns: 1fr; gap: 32px; } .page-header-inner > :last-child { display: none; } .content-area { padding: 48px 32px; } .pillars { grid-template-columns: 1fr; } }
-    @media (max-width:640px) { .page-header { padding: 36px 20px 32px; } .content-area { padding: 36px 20px; } .content-cta-buttons { flex-direction: column; align-items: center; } }
+
+    @media (max-width:900px) {
+      .page-header { padding: 48px 32px 40px; }
+      .page-header-inner { grid-template-columns: 1fr; gap: 32px; }
+      .page-header-inner > :last-child { display: none; }
+      .content-area { padding: 48px 32px; }
+      .pillars { grid-template-columns: 1fr; }
+    }
+
+    @media (max-width:640px) {
+      .page-header { padding: 36px 20px 32px; }
+      .content-area { padding: 36px 20px; }
+      .content-cta-buttons { flex-direction: column; align-items: center; }
+    }
   </style>
 </head>
 <body>
   <nav class="nav"><div class="nav-inner">
     <a class="nav-logo" href="index.html" aria-label="Javier Maidana">
-      <svg width="44" height="36" viewBox="0 0 44 36" fill="none" xmlns="http://www.w3.org/2000/svg"><rect width="44" height="36" rx="6" fill="#4482E9"/><text x="50%" y="52%" dominant-baseline="middle" text-anchor="middle" font-family="Montserrat,sans-serif" font-weight="800" font-size="13" fill="white" letter-spacing="-0.5">TBX</text></svg>
+      <img src="assets/TBX Logo Flat.png" width="44" height="36" alt="TBX Logo" style="border-radius:6px;object-fit:contain;" aria-hidden="true" />
       <div><span class="nav-logo-text">Javier <span>Maidana</span></span><span class="nav-logo-sub">Tattoo Business Xpert</span></div>
     </a>
     <div class="nav-links">
@@ -64,43 +83,72 @@
     </div>
     <div>
       <img src="assets/javier-photo.jpg" alt="Javier Maidana" class="page-header-photo" onerror="this.style.display='none'; this.nextElementSibling.style.display='flex';" />
-      <div class="page-header-photo-placeholder" style="display:none;"><span>assets/javier-photo.png</span></div>
+      <div class="page-header-photo-placeholder" style="display:none;"><span>assets/javier-photo.jpg</span></div>
     </div>
   </div></div>
 
   <section class="content-area"><div class="content-inner">
     <div class="bio-block">
       <div class="section-label">Who I Am</div>
-      <h2 class="section-title">Desarrollador de mercado en la industria del tattoo</h2>
-      <p>Soy Javier Maidana, y llevo más de 30 años trabajando en la industria del tattoo y body art en Latinoamérica. No como artista, sino desde el lado estratégico del negocio: distribución, desarrollo de marcas, expansión de mercado y profesionalización del sector.</p>
-      <p>Mi trabajo siempre estuvo orientado a construir puentes entre las marcas líderes del mundo y los operadores, distribuidores y profesionales de la región. Entiendo el mercado desde adentro, con sus complejidades, sus oportunidades y sus particularidades culturales.</p>
+      <h2 class="section-title">Desarrollo de mercado para la industria del tattoo</h2>
+      <p>Soy Javier Maidana y llevo más de 30 años trabajando en la industria del tattoo y body art en Latinoamérica. No desde el lado artístico, sino desde el lado estratégico del negocio: distribución, desarrollo de marcas, expansión regional y profesionalización del sector.</p>
+      <p>Mi trabajo estuvo siempre orientado a conectar marcas globales, distribuidores, operadores y actores clave del mercado. Conozco la industria desde adentro, con una visión práctica de sus desafíos, sus oportunidades y sus particularidades en cada país de la región.</p>
     </div>
-    <div class="highlight-card"><p>"La industria del tattoo en LATAM tiene un potencial enorme que todavía está subutilizado. Mi objetivo es acelerar esa profesionalización, conectar actores clave y construir un ecosistema de negocio sólido y sostenible."</p></div>
+
+    <div class="highlight-card">
+      <p>"La industria del tattoo en LATAM tiene un potencial enorme que todavía está subutilizado. Mi objetivo es acelerar su profesionalización, conectar actores clave y construir un ecosistema de negocio sólido y sostenible."</p>
+    </div>
+
     <div class="bio-block">
       <div class="section-label">Áreas de Enfoque</div>
       <h2 class="section-title">Lo que hago</h2>
-      <img src="assets/TBX Logo Flat.png" width="120" alt="TBX Latam" style="border-radius:10px;object-fit:contain;" />
-        <div class="pillar"><span class="pillar-icon">🗺️</span><div class="pillar-title">Desarrollo de Mercado</div><div class="pillar-desc">Identificación de oportunidades, análisis competitivo y expansión estratégica en mercados de LATAM.</div></div>
-        <div class="pillar"><span class="pillar-icon">📦</span><div class="pillar-title">Distribución</div><div class="pillar-desc">Construcción y gestión de redes de distribución para marcas internacionales en la región.</div></div>
-        <div class="pillar"><span class="pillar-icon">🏷️</span><div class="pillar-title">Desarrollo de Marcas</div><div class="pillar-desc">Posicionamiento y crecimiento de marcas en el segmento profesional de la industria.</div></div>
-        <div class="pillar"><span class="pillar-icon">📈</span><div class="pillar-title">Estrategia Regional</div><div class="pillar-desc">Visión de largo plazo para el crecimiento sostenible del negocio en Latinoamérica.</div></div>
+
+      <div class="pillars">
+        <div class="pillar">
+          <span class="pillar-icon">🗺️</span>
+          <div class="pillar-title">Desarrollo de Mercado</div>
+          <div class="pillar-desc">Identificación de oportunidades, análisis competitivo y expansión estratégica en mercados de LATAM.</div>
+        </div>
+
+        <div class="pillar">
+          <span class="pillar-icon">📦</span>
+          <div class="pillar-title">Distribución</div>
+          <div class="pillar-desc">Construcción y fortalecimiento de redes de distribución para marcas internacionales en la región.</div>
+        </div>
+
+        <div class="pillar">
+          <span class="pillar-icon">🏷️</span>
+          <div class="pillar-title">Desarrollo de Marcas</div>
+          <div class="pillar-desc">Posicionamiento, entrada al mercado y crecimiento de marcas en el segmento profesional.</div>
+        </div>
+
+        <div class="pillar">
+          <span class="pillar-icon">📈</span>
+          <div class="pillar-title">Estrategia Regional</div>
+          <div class="pillar-desc">Visión comercial de largo plazo para construir crecimiento sostenible en Latinoamérica.</div>
+        </div>
       </div>
     </div>
+
     <hr class="content-divider" />
+
     <div class="bio-block">
       <div class="section-label">TBX Latam</div>
       <h2 class="section-title">Tattoo Business Xpert — la plataforma</h2>
-      <p>Fundé TBX Latam con una misión clara: profesionalizar la industria del tattoo en Latinoamérica. TBX es la plataforma de referencia para marcas, distribuidores y operadores que quieren hacer crecer su negocio con una base sólida.</p>
+      <p>Fundé TBX Latam con una misión clara: profesionalizar la industria del tattoo en Latinoamérica. TBX es una plataforma pensada para marcas, distribuidores y operadores que buscan crecer con una base estratégica más sólida.</p>
       <p>No se trata solo de vender productos. Se trata de construir un ecosistema: educación de negocio, conexión entre actores del mercado, inteligencia comercial y representación regional de marcas globales.</p>
-      <p>TBX nace de 30 años de experiencia en el campo, de haber visto los errores que se repiten, las oportunidades que se pierden y el talento que queda sin infraestructura para crecer.</p>
+      <p>TBX nace de décadas de experiencia real en el terreno, de haber visto errores repetidos, oportunidades desaprovechadas y talento sin la infraestructura adecuada para escalar.</p>
     </div>
+
     <hr class="content-divider" />
+
     <div class="bio-block">
       <div class="section-label">Mi Enfoque</div>
       <h2 class="section-title">Posicionamiento real, no engagement vacío</h2>
-      <p>No busco seguidores ni likes. Busco conversaciones con las personas correctas: marcas que quieren entrar a LATAM, distribuidores que necesitan estrategia, operadores que quieren escalar su negocio.</p>
-      <p>Mi trabajo es de largo plazo. No soy consultor de una sola propuesta — soy un socio estratégico que conoce el terreno, tiene relaciones consolidadas en toda la región y entiende qué funciona y qué no en cada mercado.</p>
+      <p>No busco seguidores ni likes. Busco conversaciones con las personas correctas: marcas que quieren entrar a LATAM, distribuidores que necesitan estrategia y operadores que quieren escalar su negocio con visión de largo plazo.</p>
+      <p>Mi trabajo no es táctico ni superficial. Es un enfoque de construcción regional, basado en experiencia, relaciones consolidadas y conocimiento real del mercado latinoamericano.</p>
     </div>
+
     <div class="content-cta">
       <h3>¿Querés trabajar juntos?</h3>
       <p>Si tu marca, distribuidora u operación apunta a LATAM, hablemos.</p>
