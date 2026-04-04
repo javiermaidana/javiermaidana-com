@@ -14,15 +14,180 @@
   <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
 
   <link rel="stylesheet" href="assets/shared.css" />
+
+  <style>
+    .page-header {
+      background: var(--white);
+      border-bottom: 1px solid var(--border);
+      padding: 64px 60px 56px;
+    }
+
+    .page-header-inner {
+      max-width: var(--max-w);
+      margin: 0 auto;
+      display: grid;
+      grid-template-columns: 1fr;
+      gap: 32px;
+      align-items: center;
+    }
+
+    .page-header-tag {
+      display: inline-block;
+      font-family: var(--font-body);
+      font-size: 0.78rem;
+      font-weight: 600;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--blue);
+      background: var(--blue-bg);
+      padding: 5px 12px;
+      border-radius: 20px;
+      margin-bottom: 16px;
+    }
+
+    .page-header-title {
+      font-family: var(--font-head);
+      font-size: clamp(2rem, 3.5vw, 2.8rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.1;
+      letter-spacing: -0.02em;
+      margin-bottom: 16px;
+      max-width: 760px;
+    }
+
+    .page-header-title .accent {
+      color: var(--blue);
+    }
+
+    .page-header-lead {
+      font-family: var(--font-body);
+      font-size: 1.1rem;
+      color: var(--text-mid);
+      line-height: 1.7;
+      max-width: 760px;
+    }
+
+    .content-area {
+      background: var(--white);
+      padding: 64px 60px;
+    }
+
+    .content-inner {
+      max-width: 760px;
+      margin: 0 auto;
+    }
+
+    .section-label {
+      font-family: var(--font-body);
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--blue);
+      margin-bottom: 10px;
+    }
+
+    .section-title {
+      font-family: var(--font-head);
+      font-size: clamp(1.4rem, 2.5vw, 1.9rem);
+      font-weight: 800;
+      color: var(--text-dark);
+      line-height: 1.2;
+      letter-spacing: -0.01em;
+      margin-bottom: 20px;
+    }
+
+    .bio-block {
+      margin-bottom: 48px;
+    }
+
+    .bio-block p {
+      font-family: var(--font-body);
+      font-size: 1rem;
+      color: var(--text-mid);
+      line-height: 1.75;
+      margin-bottom: 16px;
+    }
+
+    .pillars {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 16px;
+      margin: 32px 0;
+    }
+
+    .pillar {
+      background: var(--bg);
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      padding: 20px;
+    }
+
+    .pillar-title {
+      font-family: var(--font-head);
+      font-size: 0.95rem;
+      font-weight: 800;
+      color: var(--text-dark);
+      margin-bottom: 6px;
+    }
+
+    .pillar-desc {
+      font-family: var(--font-body);
+      font-size: 0.875rem;
+      color: var(--text-light);
+      line-height: 1.5;
+    }
+
+    .highlight-card {
+      background: var(--blue-bg);
+      border-left: 4px solid var(--blue);
+      border-radius: 0 var(--radius) var(--radius) 0;
+      padding: 20px 24px;
+      margin: 32px 0;
+    }
+
+    .highlight-card p {
+      font-family: var(--font-body);
+      font-size: 1.05rem;
+      font-weight: 500;
+      color: var(--text-dark);
+      line-height: 1.6;
+      margin: 0;
+    }
+
+    @media (max-width: 900px) {
+      .page-header {
+        padding: 48px 32px 40px;
+      }
+
+      .content-area {
+        padding: 48px 32px;
+      }
+
+      .pillars {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 640px) {
+      .page-header {
+        padding: 36px 20px 32px;
+      }
+
+      .content-area {
+        padding: 36px 20px;
+      }
+    }
+  </style>
 </head>
 
 <body>
 
   <nav class="nav">
     <div class="nav-inner">
-
-      <a class="nav-logo" href="index.html">
-        <img src="assets/tbx-logo-flat.png" width="44" height="36" alt="TBX Logo" />
+      <a class="nav-logo" href="index.html" aria-label="Javier Maidana">
+        <img src="assets/tbx-logo-flat.png" width="44" height="36" alt="TBX Logo" style="border-radius:6px;object-fit:contain;" />
         <div>
           <span class="nav-logo-text">Javier <span>Maidana</span></span>
           <span class="nav-logo-sub">Tattoo Business Xpert</span>
@@ -34,7 +199,6 @@
         <a href="about.html" class="nav-link">Background</a>
         <a href="contact.html" class="nav-cta">Let's Connect</a>
       </div>
-
     </div>
   </nav>
 
@@ -116,8 +280,8 @@
 
   <footer class="page-footer">
     <p>
-      © 2026 Javier Maidana · 
-      <a href="index.html">Home</a> · 
+      © 2026 Javier Maidana ·
+      <a href="index.html">Home</a> ·
       <a href="contact.html">Contact</a>
     </p>
   </footer>
