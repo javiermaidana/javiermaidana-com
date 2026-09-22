@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>Let's Connect — Javier Maidana</title>
+<meta name="description" content="A direct way to connect with Javier Maidana." />
+<link rel="icon" type="image/png" href="assets/favicon.png" />
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@800&family=Inter:wght@400;500;600&display=swap" rel="stylesheet" />
+<link rel="stylesheet" href="assets/shared.css" />
+<script src="assets/i18n.js"></script>
+</head>
+<body>
+<nav class="nav">
+  <div class="wrap nav-inner">
+    <a class="brand" href="index.html" aria-label="Javier Maidana">
+      <img src="assets/tbx-logo-flat.png" alt="TBX" />
+      <span class="brand-rule"></span>
+      <span class="brand-text"><span class="brand-name">Javier <span class="accent">Maidana</span></span><span class="brand-sub">Tattoo Business Xpert</span></span>
+    </a>
+    <div class="nav-links">
+      <a href="index.html" class="nav-link" data-i18n="nav.home">Home</a>
+      <a href="about.html" class="nav-link" data-i18n="nav.about">Background</a>
+      <div class="lang"><button type="button" data-lang="en">EN</button><button type="button" data-lang="es">ES</button></div>
+      <a href="contact.html" class="btn btn-primary btn-sm" data-i18n="nav.connect">Let's Connect</a>
+    </div>
+  </div>
+</nav>
+
+<section class="wrap contact-head">
+  <div class="crumb"><a href="index.html" data-i18n="contact.crumbHome">Home</a><span>›</span><span data-i18n="contact.crumb">Let's Connect</span></div>
+  <h1><span data-i18n="contact.title1">Let's </span><span class="accent" data-i18n="contact.title2">Connect</span></h1>
+  <p class="lead" data-i18n="contact.lead">A direct space to connect with me personally.</p>
+</section>
+
+<section class="contact-area">
+  <div class="wrap contact-grid">
+    <form id="contact-form" class="card form-card" action="https://formspree.io/f/xnjooqgn" method="POST">
+      <input type="hidden" name="_subject" value="Message via javiermaidana.com" />
+      <input type="text" name="_gotcha" style="display:none" tabindex="-1" autocomplete="off" />
+      <div>
+        <div class="form-title" data-i18n="contact.formTitle">Want to talk with me?</div>
+        <div class="form-sub" data-i18n="contact.formSub">Feel free to send a message. I personally review each inquiry.</div>
+      </div>
+      <div class="row">
+        <label class="field"><span><span data-i18n="contact.name">Name</span><span class="req">*</span></span>
+          <input class="input" name="name" type="text" required data-i18n-ph="contact.namePh" placeholder="Your name" /></label>
+        <label class="field"><span><span data-i18n="contact.profile">I am a…</span><span class="req">*</span></span>
+          <select class="input" name="profile" required>
+            <option value="" selected disabled data-i18n="contact.profiles.0">Select an option</option>
+            <option value="Brand" data-i18n="contact.profiles.1">Brand</option>
+            <option value="Distributor" data-i18n="contact.profiles.2">Distributor</option>
+            <option value="Studio / Artist" data-i18n="contact.profiles.3">Studio / Artist</option>
+            <option value="Press" data-i18n="contact.profiles.4">Press</option>
+            <option value="Other" data-i18n="contact.profiles.5">Other</option>
+          </select></label>
+      </div>
+      <div class="row">
+        <label class="field"><span data-i18n="contact.country">Country</span>
+          <select class="input" name="country">
+            <option value="" selected data-i18n="contact.countries.0">Select your country</option>
+            <option value="Argentina" data-i18n="contact.countries.1">Argentina</option>
+            <option value="Bolivia" data-i18n="contact.countries.2">Bolivia</option>
+            <option value="Brazil" data-i18n="contact.countries.3">Brazil</option>
+            <option value="Chile" data-i18n="contact.countries.4">Chile</option>
+            <option value="Colombia" data-i18n="contact.countries.5">Colombia</option>
+            <option value="Ecuador" data-i18n="contact.countries.6">Ecuador</option>
+            <option value="Mexico" data-i18n="contact.countries.7">Mexico</option>
+            <option value="Paraguay" data-i18n="contact.countries.8">Paraguay</option>
+            <option value="Peru" data-i18n="contact.countries.9">Peru</option>
+            <option value="Uruguay" data-i18n="contact.countries.10">Uruguay</option>
+            <option value="Venezuela" data-i18n="contact.countries.11">Venezuela</option>
+            <option value="Spain" data-i18n="contact.countries.12">Spain</option>
+            <option value="United States" data-i18n="contact.countries.13">United States</option>
+            <option value="Other" data-i18n="contact.countries.14">Other</option>
+          </select></label>
+        <label class="field"><span><span data-i18n="contact.email">Email</span><span class="req">*</span></span>
+          <input class="input" name="email" type="email" required data-i18n-ph="contact.emailPh" placeholder="your@email.com" /></label>
+      </div>
+      <label class="field"><span><span data-i18n="contact.message">Message</span><span class="req">*</span></span>
+        <textarea class="input" name="message" required data-i18n-ph="contact.messagePh" placeholder="Write your message here."></textarea></label>
+      <button type="submit" class="btn btn-primary" id="submit-btn" data-i18n="contact.send">Send Message</button>
+      <div class="feedback success" id="form-success" data-i18n="contact.sent">✓ Message sent. I will review it as soon as possible.</div>
+      <div class="feedback error" id="form-error">Something went wrong. Please write to contacto@javiermaidana.com</div>
+    </form>
+
+    <div class="side">
+      <div class="card">
+        <div class="side-title" data-i18n="contact.fastTitle">Fastest reply</div>
+        <div class="side-sub" data-i18n="contact.fastSub">In Latin America? Write me on WhatsApp.</div>
+        <a class="btn btn-wa" href="https://api.whatsapp.com/send?phone=541169666353&amp;text=Hi%20Javier" target="_blank" rel="noopener"><span class="ico ico-sm i-wa"></span><span data-i18n="contact.waBtn">Message on WhatsApp</span></a>
+      </div>
+      <div class="card">
+        <div class="side-title" data-i18n="contact.directTitle">Direct Contact</div>
+        <a class="item" href="mailto:contacto@javiermaidana.com"><span class="item-icon bg-mail"><span class="ico ico-sm i-mail"></span></span><span><span class="item-type">Email</span><span class="item-label">contacto@javiermaidana.com</span></span></a>
+        <a class="item" href="https://www.linkedin.com/in/javiermaidanatbx/" target="_blank" rel="noopener"><span class="item-icon bg-li"><span class="ico ico-sm i-li"></span></span><span><span class="item-type">LinkedIn</span><span class="item-label">javiermaidanatbx</span></span></a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section class="band-note">
+  <div class="wrap"><p data-i18n="contact.banner">I personally read every message. Direct, simple and personal communication.</p></div>
+</section>
+
+<section class="connect">
+  <div class="wrap">
+    <div>
+      <h2 data-i18n="connect.headingAlt">Find me online</h2>
+      <div class="socials">
+        <a class="social bg-li" href="https://www.linkedin.com/in/javiermaidanatbx/" target="_blank" rel="noopener" aria-label="LinkedIn"><span class="ico i-li"></span></a>
+        <a class="social bg-ig" href="https://www.instagram.com/tattoobusinessxpert/" target="_blank" rel="noopener" aria-label="Instagram"><span class="ico i-ig"></span></a>
+        <a class="social bg-mail" href="mailto:contacto@javiermaidana.com" aria-label="Email"><span class="ico i-mail"></span></a>
+        <a class="social bg-wa" href="https://api.whatsapp.com/send?phone=541169666353&amp;text=Hi%20Javier" target="_blank" rel="noopener" aria-label="WhatsApp"><span class="ico i-wa"></span></a>
+      </div>
+    </div>
+    <div class="rowlinks">
+      <a href="index.html"><span data-i18n="connect.home">Home</span><span>→</span></a>
+      <a href="about.html"><span data-i18n="connect.about">Explore Background</span><span>→</span></a>
+      <a href="https://www.linkedin.com/in/javiermaidanatbx/" target="_blank" rel="noopener">LinkedIn<span>↗</span></a>
+      
+    </div>
+  </div>
+</section>
+
+<script>
+  (function(){
+    var form=document.getElementById('contact-form'),btn=document.getElementById('submit-btn'),ok=document.getElementById('form-success'),err=document.getElementById('form-error');
+    function t(k){return window.TBX_COPY[window.TBX_LANG||'en'].contact[k];}
+    form.addEventListener('submit',async function(e){
+      e.preventDefault();btn.textContent=t('sending');btn.disabled=true;ok.style.display='none';err.style.display='none';
+      try{var r=await fetch(form.action,{method:'POST',body:new FormData(form),headers:{'Accept':'application/json'}});if(r.ok){form.reset();ok.style.display='block';}else{throw new Error();}}
+      catch(x){err.style.display='block';}
+      btn.textContent=t('send');btn.disabled=false;
+    });
+  })();
+</script>
+
+<footer class="footer">
+  <div class="wrap">
+    <span>© 2026 Javier Maidana</span>
+    <nav><a href="contact.html" data-i18n="footer.contact">Contact</a></nav>
+  </div>
+</footer>
+</body>
+</html>
